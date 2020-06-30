@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Galada:regular);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #5c5e5e;
+    font-family: 'galada',sans-serif;
+}
+#game{
+    background-color: #5090de;
+    height: 650px;
+    border-bottom: 3px solid black;
+}
+
+.score{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 15em;
+}
+
+.lost{
+    position: absolute;
+    display: none;
+    margin-top: 10em;
+}
+
+#character img{
+    width: 150px;
+    height: 121px;
+    object-fit: cover;
+}
+#character{
+    width:118px;
+    height: 110px;
+    position: relative;
+    top: 31.2em;
+    left: 10px;
+}
+
+.animate{
+    animation: jump 1s infinite linear;
+}
+
+@keyframes jump{
+    0%{top: 31.2em;}
+    10%{top: 28em; rotate: -20deg;}
+    30%{top: 26em; rotate: -15deg;}
+    50%{top: 25em; rotate: 5deg;}
+    65%{top: 27em; rotate: 15deg;}
+    80%{top: 29em; rotate: 10deg;}
+    100%{top: 31.2em;}
+}
+
+#block img{
+    width: 50px;
+
+}
+#block{
+    width: 50px;
+    position: relative;
+    top: 28.4em;
+    left: 27em;
+    animation: block 1.3s 1s infinite linear;
+}    
+
+@keyframes block{
+    0%{left: 27em;}
+    100%{left: -5em;}
+}
+
+#audio{
+    display: none;
+}
